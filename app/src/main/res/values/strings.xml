@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BinlistApp</string>
+    <string name="error_loading">try again</string>
+    <string name="retry_loading">try</string>
+    <string name="empty_posts">no data</string>
+    <string name="add_post">new try</string>
+    <string name="description_post_save">save</string>
+</resources>
