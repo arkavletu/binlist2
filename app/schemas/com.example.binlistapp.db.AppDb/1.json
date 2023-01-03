@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "acd8d030067645457eede5c78405c790",
+    "identityHash": "194b6012d57b71fbb7bb003409b5f01e",
     "entities": [
       {
         "tableName": "CardInfoEntity",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `length` INTEGER NOT NULL, `luhn` INTEGER NOT NULL, `scheme` TEXT NOT NULL, `type` TEXT NOT NULL, `brand` TEXT NOT NULL, `prepaid` INTEGER NOT NULL, `bank` TEXT NOT NULL, `country` TEXT NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `number` TEXT NOT NULL, `scheme` TEXT NOT NULL, `type` TEXT NOT NULL, `brand` TEXT NOT NULL, `prepaid` INTEGER NOT NULL, `country` TEXT NOT NULL, `bank` TEXT NOT NULL)",
         "fields": [
           {
             "fieldPath": "id",
@@ -15,15 +15,9 @@
             "notNull": true
           },
           {
-            "fieldPath": "length",
-            "columnName": "length",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "luhn",
-            "columnName": "luhn",
-            "affinity": "INTEGER",
+            "fieldPath": "number",
+            "columnName": "number",
+            "affinity": "TEXT",
             "notNull": true
           },
           {
@@ -51,14 +45,14 @@
             "notNull": true
           },
           {
-            "fieldPath": "bank",
-            "columnName": "bank",
+            "fieldPath": "country",
+            "columnName": "country",
             "affinity": "TEXT",
             "notNull": true
           },
           {
-            "fieldPath": "country",
-            "columnName": "country",
+            "fieldPath": "bank",
+            "columnName": "bank",
             "affinity": "TEXT",
             "notNull": true
           }
@@ -76,7 +70,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'acd8d030067645457eede5c78405c790')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '194b6012d57b71fbb7bb003409b5f01e')"
     ]
   }
 }

@@ -24,7 +24,7 @@ class CardInfoViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(post:CardInfo){
         binding.apply {
-            bin.text = post.length.toString()
+            bin.text = post.number.length.toString()
         }
     }
 }
